@@ -1,0 +1,132 @@
+[
+  {
+    "id": "DVX-01",
+    "name": "Ghost Delivery Club",
+    "price": 2250,
+    "image": "assets/ghost.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "White"
+  },
+  {
+    "id": "DVX-11",
+    "name": "Design 11",
+    "price": 2250,
+    "image": "assets/design11.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-10",
+    "name": "Design 10",
+    "price": 2250,
+    "image": "assets/design10.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-09",
+    "name": "Design 09",
+    "price": 2250,
+    "image": "assets/design09.jpeg",
+    "sizes": [
+      "L"
+    ],
+    "stock": {
+      "L": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-08",
+    "name": "Design 08",
+    "price": 2250,
+    "image": "assets/design08.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-07",
+    "name": "Design 07",
+    "price": 2250,
+    "image": "assets/design07.jpeg",
+    "sizes": [
+      "L"
+    ],
+    "stock": {
+      "L": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-06B",
+    "name": "Design 06 \u2014 Black",
+    "price": 2250,
+    "image": "assets/design06black.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "Black"
+  },
+  {
+    "id": "DVX-05",
+    "name": "Design 05",
+    "price": 2250,
+    "image": "assets/design05.jpeg",
+    "sizes": [
+      "L"
+    ],
+    "stock": {
+      "L": 5
+    },
+    "color": "Green"
+  },
+  {
+    "id": "DVX-03",
+    "name": "Unshaken \u2014 Design 03",
+    "price": 2250,
+    "image": "assets/design03.jpeg",
+    "sizes": [
+      "L"
+    ],
+    "stock": {
+      "L": 5
+    },
+    "color": "White"
+  },
+  {
+    "id": "DVX-06R",
+    "name": "Design 06 \u2014 Red",
+    "price": 2250,
+    "image": "assets/design06red.jpeg",
+    "sizes": [
+      "M"
+    ],
+    "stock": {
+      "M": 5
+    },
+    "color": "Red"
+  }
+]
