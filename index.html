@@ -260,7 +260,7 @@ img,svg,video{max-width:100%}
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-import { getFirestore, collection, getDocs, addDoc, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 const firebaseConfig={apiKey:"AIzaSyB7VnK4N_Fo2JhCNcYL-UY9gyqhezXI0-8",authDomain:"danvexis-3a1e0.firebaseapp.com",projectId:"danvexis-3a1e0",storageBucket:"danvexis-3a1e0.firebasestorage.app",messagingSenderId:"1083975479921",appId:"1:1083975479921:web:3a67e7b171f2652def61d0",measurementId:"G-EWJPTVB38Y"};
 const db=getFirestore(initializeApp(firebaseConfig));
 let baseProducts=[{"id":"DVX-01","name":"Ghost Delivery Club","price":2250,"image":"ghost.jpeg","sizes":["M"],"stock":{"M":5},"color":"White","category":"Oversized T-Shirt"},{"id":"DVX-11","name":"Design 11","price":2250,"image":"design11.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-10","name":"Design 10","price":2250,"image":"design10.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-09","name":"Design 09","price":2250,"image":"design09.jpeg","sizes":["L"],"stock":{"L":5},"color":"Black"},{"id":"DVX-08","name":"Design 08","price":2250,"image":"design08.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-07","name":"Design 07","price":2250,"image":"design07.jpeg","sizes":["L"],"stock":{"L":5},"color":"Black"},{"id":"DVX-06B","name":"Design 06 — Black","price":2250,"image":"design06black.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-05","name":"Design 05","price":2250,"image":"design05.jpeg","sizes":["L"],"stock":{"L":5},"color":"Green"},{"id":"DVX-03","name":"Unshaken — Design 03","price":2250,"image":"design03.jpeg","sizes":["L"],"stock":{"L":5},"color":"White"},{"id":"DVX-06R","name":"Design 06 — Red","price":2250,"image":"design06red.jpeg","sizes":["M"],"stock":{"M":5},"color":"Red"}];
@@ -279,8 +279,52 @@ function closeQuickOnly(){$('#quickModal').classList.remove('show')}
 function closePanels(){$('#overlay').classList.remove('show');$('#cartDrawer').classList.remove('show');$('#checkoutModal').classList.remove('show');$('#quickModal').classList.remove('show')}
 function openQuick(id){const p=products.find(x=>x.id===id);if(!p)return;quickProductId=id;$('#quickImage').src=p.image||'ghost.jpeg';$('#quickName').textContent=p.name;$('#quickPrice').textContent='Rs. '+money(p.price);$('#quickMeta').textContent=`${p.id} / ${p.category||'DANVEXIS'}`;$('#quickDesc').textContent=p.description||'Original DANVEXIS streetwear artwork from DROP 01 — THE FIRST EVOLUTION.';$('#quickSize').innerHTML=(p.sizes||['M']).map(s=>`<option value="${escapeHtml(s)}">SIZE ${escapeHtml(s)} · ${Number((p.stock||{})[s]||0)} LEFT</option>`).join('');const total=stockTotal(p);$('#quickAdd').disabled=total<=0;$('#quickAdd').textContent=total<=0?'SOLD OUT':'ADD TO BAG';$('#quickAdd').onclick=()=>addToCart(id,$('#quickSize').value);$('#overlay').classList.add('show');$('#quickModal').classList.add('show')}
 function openCheckout(){if(!cart.length)return alert('Your bag is empty.');$('#cartDrawer').classList.remove('show');$('#checkoutModal').classList.add('show');const t=cart.reduce((a,x)=>a+x.price*x.qty,0);$('#checkoutSummary').innerHTML='<b>ORDER SUMMARY</b><br><br>'+cart.map(x=>`${escapeHtml(x.name)} / ${escapeHtml(x.size)} × ${x.qty} — Rs. ${money(x.price*x.qty)}`).join('<br>')+`<br><br><b>TOTAL: Rs. ${money(t)}</b><br>PAYMENT: CASH ON DELIVERY`}
-async function placeOrder(){const name=$('#name').value.trim(),phone=$('#phone').value.trim(),address=$('#address').value.trim(),city=$('#city').value.trim();if(!name||!phone||!address||!city)return alert('Please complete your name, phone, address and city.');const total=cart.reduce((a,x)=>a+x.price*x.qty,0);const order={status:'New',customer:{name,phone,address,city,province:$('#province').value,note:$('#note').value},items:[...cart],total,createdAt:serverTimestamp()};try{const ref=await addDoc(collection(db,'orders'),order);const id='DVX-'+ref.id.slice(0,8).toUpperCase();cart=[];saveCart();$('#checkoutFormWrap').classList.add('hide');const s=$('#successWrap');s.classList.remove('hide');s.innerHTML=`<span class="eyebrow">ORDER CONFIRMED</span><h2>THANK YOU, ${escapeHtml(name)}.</h2><p>Your order number is <b>${id}</b>.</p><p>Total: <b>Rs. ${money(total)}</b> · Cash on Delivery.</p><button class="checkoutBtn" onclick="location.reload()">CONTINUE SHOPPING</button>`}catch(e){alert('Could not place order: '+e.message)}}
-async function loadFirestoreProducts(){try{let snap;try{snap=await getDocs(query(collection(db,'products'),orderBy('createdAt','desc')))}catch{snap=await getDocs(collection(db,'products'))}const merged=new Map(baseProducts.map(p=>[p.id,{...p}]));snap.forEach(docSnap=>{const d=docSnap.data();if(d.active===false)return;let sizes=[];let stock={};if(Array.isArray(d.sizes)&&d.sizes.length){sizes=d.sizes.map(String);if(d.stock&&typeof d.stock==='object'&&!Array.isArray(d.stock))stock={...d.stock};else sizes.forEach(s=>stock[s]=Number(d.stock||0))}else{const size=String(d.size||'M').trim()||'M';sizes=[size];stock={[size]:Number(d.stock||0)}}const sku=String(d.sku||docSnap.id);const existing=merged.get(sku)||{};merged.set(sku,{...existing,id:sku,name:d.name||existing.name||'DANVEXIS Product',price:Number(d.price??existing.price??0),image:d.imageData||d.imageUrl||existing.image||'',sizes,stock,color:d.color||existing.color||'All',category:d.category||existing.category||'Premium Streetwear',description:d.description||existing.description||''})});products=[...merged.values()]}catch(e){console.error('Firestore products:',e);products=[...baseProducts]}renderProducts()}
+async function placeOrder(){
+  const name=$('#name').value.trim(),phone=$('#phone').value.trim(),address=$('#address').value.trim(),city=$('#city').value.trim();
+  if(!name||!phone||!address||!city)return alert('Please complete your name, phone, address and city.');
+  if(!cart.length)return alert('Your bag is empty.');
+  const button=document.querySelector('#checkoutFormWrap .checkoutBtn');
+  const originalText=button?.textContent||'PLACE COD ORDER';
+  if(button){button.disabled=true;button.textContent='CHECKING STOCK...'}
+  try{
+    // Re-check Firestore stock immediately before accepting the order.
+    for(const item of cart){
+      const p=products.find(x=>x.id===item.id);
+      if(!p?.firestoreDocId)throw new Error(`${item.name} is not linked to live inventory. Please refresh and try again.`);
+      const snap=await getDoc(doc(db,'products',p.firestoreDocId));
+      if(!snap.exists())throw new Error(`${item.name} is no longer available.`);
+      const d=snap.data();
+      let available=0;
+      if(d.stock&&typeof d.stock==='object'&&!Array.isArray(d.stock))available=Number(d.stock[item.size]||0);
+      else available=Number(d.stock||0);
+      if(available<Number(item.qty||0))throw new Error(`${item.name} / ${item.size} has only ${available} left. Please update your bag.`);
+    }
+    const total=cart.reduce((a,x)=>a+x.price*x.qty,0);
+    const ref=doc(collection(db,'orders'));
+    const id='DVX-'+ref.id.slice(0,8).toUpperCase();
+    const order={
+      orderNumber:id,
+      status:'New',
+      source:'website',
+      channel:'Online',
+      paymentMethod:'Cash on Delivery',
+      customer:{name,phone,address,city,province:$('#province').value,note:$('#note').value},
+      items:cart.map(x=>({...x})),
+      total,
+      createdAt:serverTimestamp()
+    };
+    await setDoc(ref,order);
+    cart=[];saveCart();
+    $('#checkoutFormWrap').classList.add('hide');
+    const s=$('#successWrap');s.classList.remove('hide');
+    s.innerHTML=`<span class="eyebrow">ORDER CONFIRMED</span><h2>THANK YOU, ${escapeHtml(name)}.</h2><p>Your order number is <b>${id}</b>.</p><p>Total: <b>Rs. ${money(total)}</b> · Cash on Delivery.</p><p class="small">Your order has been sent to DANVEXIS for confirmation.</p><button class="checkoutBtn" onclick="location.reload()">CONTINUE SHOPPING</button>`;
+  }catch(e){
+    alert('Could not place order: '+e.message);
+  }finally{
+    if(button){button.disabled=false;button.textContent=originalText}
+  }
+}
+async function loadFirestoreProducts(){try{let snap;try{snap=await getDocs(query(collection(db,'products'),orderBy('createdAt','desc')))}catch{snap=await getDocs(collection(db,'products'))}const merged=new Map(baseProducts.map(p=>[p.id,{...p}]));snap.forEach(docSnap=>{const d=docSnap.data();if(d.active===false)return;let sizes=[];let stock={};if(Array.isArray(d.sizes)&&d.sizes.length){sizes=d.sizes.map(String);if(d.stock&&typeof d.stock==='object'&&!Array.isArray(d.stock))stock={...d.stock};else sizes.forEach(s=>stock[s]=Number(d.stock||0))}else{const size=String(d.size||'M').trim()||'M';sizes=[size];stock={[size]:Number(d.stock||0)}}const sku=String(d.sku||docSnap.id);const existing=merged.get(sku)||{};merged.set(sku,{...existing,id:sku,firestoreDocId:docSnap.id,name:d.name||existing.name||'DANVEXIS Product',price:Number(d.price??existing.price??0),image:d.imageData||d.imageUrl||existing.image||'',sizes,stock,color:d.color||existing.color||'All',category:d.category||existing.category||'Premium Streetwear',description:d.description||existing.description||''})});products=[...merged.values()]}catch(e){console.error('Firestore products:',e);products=[...baseProducts]}renderProducts()}
 function toggleMenu(){$('#mobileMenu').classList.toggle('show')}
 function observeReveals(){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal:not(.on)').forEach(el=>io.observe(el))}
 Object.assign(window,{filterProducts,addToCart,changeQty,openCart,closePanels,openCheckout,placeOrder,openQuick,toggleMenu});renderCart();observeReveals();loadFirestoreProducts();
