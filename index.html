@@ -13,7 +13,7 @@
 .topbar{height:32px;display:flex;align-items:center;justify-content:center;background:var(--red);font-size:10px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase;padding:0 14px;text-align:center}
 nav{position:sticky;top:0;z-index:50;height:78px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 4vw;background:rgba(7,7,7,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
 .logo{font-weight:1000;letter-spacing:7px;font-size:18px}.navlinks{display:flex;gap:28px;font-size:10px;letter-spacing:2.2px;font-weight:800;text-transform:uppercase}.navlinks a{opacity:.7}.navlinks a:hover{opacity:1}.navright{display:flex;justify-content:flex-end;align-items:center;gap:10px}.iconbtn,.bagbtn{border:1px solid #383838;background:#0e0e0e;color:white;height:40px;padding:0 14px;font-size:10px;letter-spacing:1.6px;font-weight:900}.iconbtn{width:40px;padding:0;font-size:15px}.menuBtn{display:none}
-.hero{min-height:calc(100vh - 110px);display:block;position:relative;border-bottom:1px solid var(--line);background:#070707 url('hero-background-clean.jpg') center 32%/cover no-repeat;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.83) 42%,rgba(5,5,5,.22) 72%,rgba(5,5,5,.12) 100%),linear-gradient(0deg,rgba(5,5,5,.72) 0%,transparent 45%);z-index:0}
+.hero{min-height:calc(100vh - 110px);display:block;position:relative;border-bottom:1px solid var(--line);background:#070707;overflow:hidden}.heroBg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;z-index:0;pointer-events:none}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.83) 42%,rgba(5,5,5,.22) 72%,rgba(5,5,5,.12) 100%),linear-gradient(0deg,rgba(5,5,5,.72) 0%,transparent 45%);z-index:0}
 .heroCopy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vh - 110px);padding:8vw 5.5vw 7vw;overflow:hidden;max-width:760px}.heroCopy:after{content:"01";position:absolute;right:-16px;bottom:-52px;font-size:260px;font-weight:1000;line-height:1;color:rgba(255,255,255,.025);letter-spacing:-18px;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:3.7px;font-weight:900;color:#d92a35;text-transform:uppercase}.hero h1{font-size:clamp(62px,8.4vw,132px);line-height:.78;letter-spacing:-6px;margin:20px 0 30px;font-weight:1000;text-transform:uppercase}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(245,242,237,.52)}.heroCopy p{max-width:590px;color:#aaa;line-height:1.8;font-size:14px}.heroActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.cta,.ghostBtn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font-size:10px;letter-spacing:2px;font-weight:1000;text-transform:uppercase}.cta{background:var(--white);color:#080808}.ghostBtn{border:1px solid #3c3c3c;background:#0d0d0d}.heroVisual{position:relative;min-height:660px;background:#0d0d0d url('ghost.jpeg') center/cover no-repeat;overflow:hidden}.heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.18) 30%,rgba(7,7,7,0) 55%),linear-gradient(0deg,rgba(7,7,7,.72),transparent 36%)}.heroBadge{position:absolute;right:28px;top:28px;border:1px solid rgba(255,255,255,.35);padding:11px 13px;font-size:9px;letter-spacing:2.2px;background:rgba(0,0,0,.28);backdrop-filter:blur(12px)}.heroMeta{position:absolute;left:28px;right:28px;bottom:26px;display:flex;justify-content:space-between;gap:16px;font-size:9px;letter-spacing:2px;color:#ddd}.heroMeta span:last-child{text-align:right}
 .ticker{border-bottom:1px solid var(--line);overflow:hidden;background:#0a0a0a}.tickerTrack{display:flex;width:max-content;animation:marquee 28s linear infinite}.tickerTrack span{padding:16px 28px;font-size:9px;letter-spacing:3px;color:#aaa;white-space:nowrap}.tickerTrack b{color:#fff}@keyframes marquee{to{transform:translateX(-50%)}}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.stat{padding:28px 4vw;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:11px;letter-spacing:1.8px}.stat span{display:block;margin-top:7px;color:#6f6f6f;font-size:10px;line-height:1.5}
@@ -49,6 +49,325 @@ body{background:#050505}
 @media(max-width:980px){.dvxNav{height:80px}.dvxNav .navlinks{display:none}.menuIconBtn{display:grid}.hero{min-height:820px;background-position:58% center}.heroCopy{min-height:820px;max-width:630px;padding:120px 5vw 70px}.hero h1{font-size:72px}.dropSection:before{width:72vw;right:-24vw;top:0}.featureStrip{grid-template-columns:repeat(4,1fr)}.featureStrip .stat{border-bottom:0!important}.mobileMenu{inset:80px 0 auto 0}}
 @media(max-width:620px){.dvxNav{height:72px;padding:0 4.5vw}.dvxNav .logo{font-size:16px;letter-spacing:5.5px}.cartIconBtn{width:37px}.cartIconBtn svg{width:29px}.menuIconBtn{width:31px}.menuIconBtn span{width:25px}.menuIconBtn span:nth-child(2){width:19px}.menuIconBtn span:nth-child(3){width:25px}.navright{gap:10px}.hero{min-height:720px;background-position:62% center}.hero:before{background:linear-gradient(90deg,rgba(4,4,4,.98) 0%,rgba(4,4,4,.88) 48%,rgba(4,4,4,.25) 80%,rgba(4,4,4,.08) 100%),linear-gradient(0deg,rgba(4,4,4,.55),transparent 55%)}.heroCopy{min-height:720px;padding:72px 4.6vw 38px;justify-content:center}.hero .eyebrow{font-size:9px;letter-spacing:3px}.hero h1{font-size:56px;letter-spacing:-3.8px;margin:18px 0 24px}.heroCopy p{font-size:12px;line-height:1.75;max-width:330px}.heroActions{display:grid;grid-template-columns:1fr;max-width:310px}.cta,.ghostBtn{width:100%;min-width:0}.featureStrip{grid-template-columns:1fr 1fr}.featureStrip .stat{min-height:178px;padding:26px 12px;border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}.featureStrip .stat:nth-child(2n){border-right:0!important}.featureStrip .stat:nth-child(n+3){border-bottom:0!important}.featureIcon{height:42px;margin-bottom:12px}.featureIcon svg{width:42px;height:42px}.featureStrip .stat b{font-size:9px}.featureStrip .stat span{font-size:10px;max-width:140px}.dropSection{padding:62px 4vw}.dropSection:before{width:115vw;right:-58vw;top:40px;opacity:.66}.dropSection:after{background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.88) 57%,rgba(5,5,5,.26) 100%)}.dropIntro h2{font-size:56px;letter-spacing:-3px}.dropIntro p{font-size:12px;max-width:310px}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}.chip{min-width:0;min-height:50px;padding:0 8px}.filters .chip:first-child{grid-column:span 1}.productGrid{margin-top:26px}.mobileMenu{inset:72px 0 auto 0}}
 
+
+/* =========================================================
+   DANVEXIS UNIVERSAL RESPONSIVE LAYER
+   Phones • Tablets • Laptops • Desktops • Large Screens
+   ========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+}
+button, select, input, textarea {
+  max-width: 100%;
+}
+.dvxNav,
+.hero,
+.stats,
+.section,
+.editorial,
+.promise,
+footer {
+  width: 100%;
+}
+.hero {
+  min-height: clamp(620px, calc(100svh - 72px), 980px);
+}
+.heroBg {
+  object-fit: cover;
+  object-position: 60% center;
+}
+.heroCopy {
+  width: min(100%, 760px);
+  min-height: inherit;
+}
+.productGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.productCard,
+.visual,
+.productInfo,
+.buyrow {
+  min-width: 0;
+}
+.visual img {
+  width: 100%;
+  height: auto;
+}
+.drawer {
+  width: min(480px, 100vw);
+}
+.modal,
+.quickModal {
+  max-width: calc(100vw - 24px);
+}
+.formgrid > *,
+.footerGrid > *,
+.editorial > *,
+.promiseGrid > *,
+.stats > * {
+  min-width: 0;
+}
+
+/* Large desktops */
+@media (min-width: 1440px) {
+  .dvxNav {
+    padding-left: max(4.2vw, calc((100vw - 1500px)/2));
+    padding-right: max(4.2vw, calc((100vw - 1500px)/2));
+  }
+  .heroCopy,
+  .section,
+  .promise,
+  footer {
+    padding-left: max(4.6vw, calc((100vw - 1500px)/2));
+    padding-right: max(4.6vw, calc((100vw - 1500px)/2));
+  }
+  .productGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Laptop / small desktop */
+@media (min-width: 981px) and (max-width: 1199px) {
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hero h1 {
+    font-size: clamp(70px, 8vw, 104px);
+  }
+}
+
+/* Tablets landscape + portrait */
+@media (min-width: 621px) and (max-width: 980px) {
+  .dvxNav {
+    height: 76px;
+    padding: 0 3.5vw;
+  }
+  .hero {
+    min-height: clamp(680px, calc(100svh - 76px), 860px);
+  }
+  .heroBg {
+    object-position: 62% center;
+  }
+  .heroCopy {
+    min-height: inherit;
+    padding: 72px 5vw 60px;
+    max-width: 620px;
+  }
+  .hero h1 {
+    font-size: clamp(64px, 10vw, 88px);
+  }
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+  .editorialVisual {
+    min-height: 56vw;
+    max-height: 620px;
+  }
+  .promiseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .promiseGrid .promiseCard:last-child {
+    grid-column: 1 / -1;
+  }
+  .footerGrid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* All phones */
+@media (max-width: 620px) {
+  .dvxNav {
+    height: 68px;
+    padding: 0 16px;
+  }
+  .dvxNav .logo {
+    font-size: clamp(14px, 4.5vw, 17px);
+    letter-spacing: clamp(4px, 1.5vw, 6px);
+  }
+  .navright {
+    gap: 8px;
+  }
+  .cartIconBtn {
+    width: 38px;
+    height: 42px;
+  }
+  .menuIconBtn {
+    width: 32px;
+    height: 36px;
+  }
+  .mobileMenu {
+    inset: 68px 0 auto 0;
+  }
+
+  .hero {
+    min-height: max(640px, calc(100svh - 68px));
+  }
+  .heroBg {
+    object-position: 64% center;
+  }
+  .heroCopy {
+    min-height: inherit;
+    padding: 54px 18px 34px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 64px);
+    line-height: .80;
+    letter-spacing: -3px;
+  }
+  .heroCopy p {
+    max-width: 92%;
+  }
+  .heroActions {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cta,
+  .ghostBtn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .featureStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .featureStrip .stat {
+    min-height: 160px;
+    padding: 22px 10px;
+  }
+
+  .section,
+  .dropSection,
+  .promise {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .sectionTop h2,
+  .dropIntro h2 {
+    font-size: clamp(44px, 14vw, 58px);
+    letter-spacing: -3px;
+  }
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .filters .chip {
+    width: 100%;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+  .visual img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  .buyrow {
+    grid-template-columns: minmax(96px, .9fr) minmax(0, 1.4fr);
+  }
+
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+  .editorialVisual {
+    min-height: 72vw;
+  }
+  .editorialCopy {
+    padding: 52px 18px;
+  }
+  .miniList {
+    grid-template-columns: 1fr;
+  }
+
+  .promiseGrid,
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .drawer {
+    width: 100vw;
+    padding: 20px 16px max(22px, env(safe-area-inset-bottom));
+  }
+  .modal {
+    inset: 8px;
+    max-width: calc(100vw - 16px);
+    padding: 20px 16px calc(24px + env(safe-area-inset-bottom));
+  }
+  .quickModal.show {
+    inset: 8px;
+    max-width: calc(100vw - 16px);
+  }
+  .quickImage {
+    min-height: 48vh;
+  }
+
+  .whatsapp {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .dvxNav {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .dvxNav .logo {
+    font-size: 13px;
+    letter-spacing: 3.5px;
+  }
+  .heroCopy {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(44px, 14vw, 54px);
+  }
+  .section,
+  .dropSection,
+  .promise,
+  footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .buyrow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Short-height phones / landscape phones */
+@media (max-height: 600px) and (max-width: 980px) {
+  .hero {
+    min-height: 620px;
+  }
+  .heroCopy {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+/* Prevent oversized text when device accessibility text is large */
+@supports (font-size: clamp(1rem, 2vw, 2rem)) {
+  .hero h1,
+  .sectionTop h2,
+  .dropIntro h2,
+  .editorialCopy h2 {
+    overflow-wrap: anywhere;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -66,6 +385,7 @@ body{background:#050505}
 <div class="mobileMenu" id="mobileMenu"><a href="#shop" onclick="toggleMenu()">SHOP</a><a href="#drop" onclick="toggleMenu()">DROP 01</a><a href="#about" onclick="toggleMenu()">STORY</a><a href="#contact" onclick="toggleMenu()">CONTACT</a></div>
 
 <header class="hero" id="drop">
+<img class="heroBg" src="hero-background-clean.jpg?v=3" alt="" aria-hidden="true">
 <div class="heroCopy reveal"><span class="eyebrow">DROP 01 / THE FIRST EVOLUTION</span><h1>EVOLVE <span>WITHOUT</span> LIMITS.</h1><p>DANVEXIS is premium streetwear built around original art, controlled attitude and constant evolution. Every piece is its own visual world.</p><div class="heroActions"><a class="cta" href="#shop">SHOP THE DROP →</a><a class="ghostBtn" href="#about">THE STORY</a></div></div>
 
 </header>
