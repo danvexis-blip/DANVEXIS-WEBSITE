@@ -90,9 +90,30 @@ th{color:#777;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;backgr
 .shortage{color:#ff7d87;font-weight:900}
 .readyStock{color:#9bd0a3;font-weight:900}
 
+
+.authGate{position:fixed;inset:0;z-index:9999;background:#050505;display:flex;align-items:center;justify-content:center;padding:24px}
+.authCard{width:min(430px,100%);border:1px solid #333;background:#0b0b0b;padding:32px}
+.authCard h1{font-size:28px;letter-spacing:4px;margin:0 0 8px}
+.authCard p{color:#888;line-height:1.6;margin:0 0 24px}
+.authCard input{width:100%;padding:14px;margin:0 0 12px;background:#111;border:1px solid #333;color:#fff;font-size:16px}
+.authCard button{width:100%;padding:14px;border:0;background:#f3f0e8;color:#111;font-weight:900;letter-spacing:2px}
+.authError{color:#ff7d87;font-size:12px;min-height:18px;margin-top:12px}
+.authUser{font-size:10px;color:#888;margin-top:8px;word-break:break-all}
+.logoutBtn{margin-top:8px}
+
 </style>
 </head>
 <body>
+<div id="authGate" class="authGate">
+  <div class="authCard">
+    <h1>DANVEXIS</h1>
+    <p>GARMENT ADMIN · Secure Firebase sign in</p>
+    <input id="adminEmail" type="email" value="danvexis@gmail.com" autocomplete="username" placeholder="Admin email">
+    <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Password">
+    <button onclick="adminLogin()">SIGN IN</button>
+    <div id="authError" class="authError"></div>
+  </div>
+</div>
 <div class="wrap">
 <aside id="sidebar">
   <div class="brand">DANVEXIS</div>
@@ -106,6 +127,8 @@ th{color:#777;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;backgr
     <button onclick="showView('suppliers',this)">Suppliers</button>
     <button onclick="showView('wholesale',this)">Wholesale</button>
   </div>
+<div class="authUser" id="authUser"></div>
+<button class="btn logoutBtn" onclick="adminLogout()">LOG OUT</button>
 </aside>
 
 <main>
@@ -285,6 +308,7 @@ th{color:#777;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;backgr
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getFirestore, collection, getDocs, query, orderBy, doc, updateDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 const firebaseConfig={
   apiKey:"AIzaSyB7VnK4N_Fo2JhCNcYL-UY9gyqhezXI0-8",
@@ -295,8 +319,40 @@ const firebaseConfig={
   appId:"1:1083975479921:web:3a67e7b171f2652def61d0",
   measurementId:"G-EWJPTVB38Y"
 };
-const db=getFirestore(initializeApp(firebaseConfig));
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+const auth=getAuth(app);
 let websiteOrders=[];
+
+async function adminLogin(){
+  const email=document.querySelector('#adminEmail').value.trim();
+  const password=document.querySelector('#adminPassword').value;
+  const err=document.querySelector('#authError');
+  err.textContent='Signing in…';
+  try{
+    await signInWithEmailAndPassword(auth,email,password);
+    err.textContent='';
+  }catch(e){
+    console.error(e);
+    err.textContent='Sign in failed. Check the admin email/password.';
+  }
+}
+async function adminLogout(){ await signOut(auth); }
+
+onAuthStateChanged(auth,user=>{
+  const gate=document.querySelector('#authGate');
+  const label=document.querySelector('#authUser');
+  if(user){
+    gate.style.display='none';
+    if(label)label.textContent='SIGNED IN: '+(user.email||'ADMIN');
+    loadWebsiteOrders();
+  }else{
+    gate.style.display='flex';
+    if(label)label.textContent='';
+    websiteOrders=[];
+    const m=document.querySelector('#mOrders'); if(m)m.textContent='0';
+  }
+});
 
 const LS='dvx_garment_v1';
 let state=JSON.parse(localStorage.getItem(LS)||'null')||{
@@ -519,11 +575,10 @@ function resetDemo(){if(confirm('Reset Garment V1 demo data?')){localStorage.rem
 
 Object.assign(window,{
   showView,toggleSide,exportData,resetDemo,saveGarment,editGarment,
-  createBatch,calcCost,loadWebsiteOrders,updateOrderProduction,startOrderProduction
+  createBatch,calcCost,loadWebsiteOrders,updateOrderProduction,startOrderProduction,adminLogin,adminLogout
 });
 
 renderAll();
-loadWebsiteOrders();
 </script>
 </body>
 </html>
