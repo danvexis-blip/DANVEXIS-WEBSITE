@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DANVEXIS — Evolve Without Limits</title>
+<meta name="description" content="DANVEXIS premium streetwear. DROP 01 — THE FIRST EVOLUTION.">
+<meta name="theme-color" content="#080808">
+<style>
+:root{--bg:#070707;--bg2:#0b0b0b;--panel:#101010;--panel2:#151515;--ink:#f4f2ed;--mut:#9a9a96;--mut2:#666;--line:#262626;--red:#c1121f;--red2:#8f0b14;--white:#f5f2eb;--shadow:0 24px 70px rgba(0,0,0,.45)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;overflow-x:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.hide{display:none!important}
+::selection{background:var(--red);color:#fff}
+.topbar{height:32px;display:flex;align-items:center;justify-content:center;background:var(--red);font-size:10px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase;padding:0 14px;text-align:center}
+nav{position:sticky;top:0;z-index:50;height:78px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 4vw;background:rgba(7,7,7,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font-weight:1000;letter-spacing:7px;font-size:18px}.navlinks{display:flex;gap:28px;font-size:10px;letter-spacing:2.2px;font-weight:800;text-transform:uppercase}.navlinks a{opacity:.7}.navlinks a:hover{opacity:1}.navright{display:flex;justify-content:flex-end;align-items:center;gap:10px}.iconbtn,.bagbtn{border:1px solid #383838;background:#0e0e0e;color:white;height:40px;padding:0 14px;font-size:10px;letter-spacing:1.6px;font-weight:900}.iconbtn{width:40px;padding:0;font-size:15px}.menuBtn{display:none}
+.hero{min-height:calc(100vh - 110px);display:block;position:relative;border-bottom:1px solid var(--line);background:#070707;overflow:hidden}.heroBg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;z-index:0;pointer-events:none}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.83) 42%,rgba(5,5,5,.22) 72%,rgba(5,5,5,.12) 100%),linear-gradient(0deg,rgba(5,5,5,.72) 0%,transparent 45%);z-index:0}
+.heroCopy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vh - 110px);padding:8vw 5.5vw 7vw;overflow:hidden;max-width:760px}.heroCopy:after{content:"01";position:absolute;right:-16px;bottom:-52px;font-size:260px;font-weight:1000;line-height:1;color:rgba(255,255,255,.025);letter-spacing:-18px;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:3.7px;font-weight:900;color:#d92a35;text-transform:uppercase}.hero h1{font-size:clamp(62px,8.4vw,132px);line-height:.78;letter-spacing:-6px;margin:20px 0 30px;font-weight:1000;text-transform:uppercase}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(245,242,237,.52)}.heroCopy p{max-width:590px;color:#aaa;line-height:1.8;font-size:14px}.heroActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.cta,.ghostBtn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font-size:10px;letter-spacing:2px;font-weight:1000;text-transform:uppercase}.cta{background:var(--white);color:#080808}.ghostBtn{border:1px solid #3c3c3c;background:#0d0d0d}.heroVisual{position:relative;min-height:660px;background:#0d0d0d url('ghost.jpeg') center/cover no-repeat;overflow:hidden}.heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.18) 30%,rgba(7,7,7,0) 55%),linear-gradient(0deg,rgba(7,7,7,.72),transparent 36%)}.heroBadge{position:absolute;right:28px;top:28px;border:1px solid rgba(255,255,255,.35);padding:11px 13px;font-size:9px;letter-spacing:2.2px;background:rgba(0,0,0,.28);backdrop-filter:blur(12px)}.heroMeta{position:absolute;left:28px;right:28px;bottom:26px;display:flex;justify-content:space-between;gap:16px;font-size:9px;letter-spacing:2px;color:#ddd}.heroMeta span:last-child{text-align:right}
+.ticker{border-bottom:1px solid var(--line);overflow:hidden;background:#0a0a0a}.tickerTrack{display:flex;width:max-content;animation:marquee 28s linear infinite}.tickerTrack span{padding:16px 28px;font-size:9px;letter-spacing:3px;color:#aaa;white-space:nowrap}.tickerTrack b{color:#fff}@keyframes marquee{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.stat{padding:28px 4vw;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:11px;letter-spacing:1.8px}.stat span{display:block;margin-top:7px;color:#6f6f6f;font-size:10px;line-height:1.5}
+.section{padding:88px 4.5vw}.sectionTop{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:30px}.sectionTop h2{font-size:clamp(42px,6vw,84px);line-height:.88;letter-spacing:-4px;margin:8px 0 0;text-transform:uppercase}.sectionTop p{max-width:430px;color:#858585;font-size:12px;line-height:1.7}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:26px 0 28px;padding-top:18px;border-top:1px solid var(--line)}.filters{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #333;background:#0d0d0d;color:#999;padding:10px 13px;font-size:9px;letter-spacing:1.6px;font-weight:900}.chip.active,.chip:hover{background:#f4f2ed;color:#090909;border-color:#f4f2ed}.count{font-size:9px;letter-spacing:2px;color:#666;text-transform:uppercase}
+.productGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.productCard{position:relative;background:#0d0d0d;border:1px solid var(--line);overflow:hidden;transition:.28s ease}.productCard:hover{transform:translateY(-5px);border-color:#4a4a4a;box-shadow:var(--shadow)}.visual{position:relative;overflow:hidden;background:#121212}.visual img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .55s ease}.productCard:hover .visual img{transform:scale(1.025)}.tag{position:absolute;top:12px;left:12px;z-index:2;background:rgba(7,7,7,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);padding:7px 9px;font-size:8px;letter-spacing:2px;font-weight:900}.stockTag{position:absolute;top:12px;right:12px;z-index:2;padding:7px 9px;font-size:8px;letter-spacing:1.5px;font-weight:900;background:#f2efe8;color:#090909}.stockTag.low{background:var(--red);color:#fff}.stockTag.out{background:#222;color:#777}.quick{position:absolute;left:12px;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.28);background:rgba(7,7,7,.78);backdrop-filter:blur(12px);color:#fff;min-height:42px;opacity:0;transform:translateY(8px);transition:.22s;font-size:9px;letter-spacing:1.8px;font-weight:900}.productCard:hover .quick{opacity:1;transform:none}.productInfo{padding:16px}.productTop{display:flex;justify-content:space-between;gap:14px}.productName{font-size:13px;font-weight:950;line-height:1.3}.price{font-size:13px;font-weight:950;white-space:nowrap}.meta{margin:8px 0 13px;color:#666;font-size:9px;letter-spacing:1.3px;text-transform:uppercase}.buyrow{display:grid;grid-template-columns:1fr 1.55fr;gap:8px}.buyrow select,.addBtn{min-height:43px;border:1px solid #343434}.buyrow select{background:#090909;color:#fff;padding:0 10px;font-size:10px}.addBtn{background:#f2efe8;color:#080808;font-size:9px;letter-spacing:1.7px;font-weight:1000}.addBtn:disabled{background:#171717;color:#555;border-color:#272727;cursor:not-allowed}
+.editorial{display:grid;grid-template-columns:1.15fr .85fr;border-block:1px solid var(--line);background:#0b0b0b}.editorialVisual{min-height:660px;background:url('design06black.jpeg') center/cover no-repeat;position:relative}.editorialVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b0b0b 0%,transparent 42%)}.editorialCopy{padding:7vw 5vw;display:flex;flex-direction:column;justify-content:center}.editorialCopy h2{font-size:clamp(48px,7vw,96px);line-height:.82;letter-spacing:-5px;margin:15px 0 28px}.editorialCopy p{color:#929292;line-height:1.8;font-size:13px}.miniList{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}.miniList div{background:#0b0b0b;padding:18px}.miniList b{display:block;font-size:9px;letter-spacing:1.7px}.miniList span{display:block;margin-top:6px;font-size:10px;color:#686868}
+.promise{padding:76px 4.5vw}.promiseGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.promiseCard{border:1px solid var(--line);padding:28px;background:#0c0c0c}.promiseCard small{display:block;color:var(--red);letter-spacing:2px;font-weight:900}.promiseCard h3{font-size:20px;margin:18px 0 10px}.promiseCard p{color:#777;line-height:1.7;font-size:12px}
+footer{padding:52px 4.5vw 26px;border-top:1px solid var(--line);background:#080808}.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.footerLogo{font-size:24px;font-weight:1000;letter-spacing:7px}.footerGrid p,.footerGrid a{font-size:10px;color:#777;line-height:1.9;letter-spacing:.4px}.footerLinks{display:flex;flex-direction:column}.footerBottom{margin-top:36px;padding-top:18px;border-top:1px solid #1d1d1d;display:flex;justify-content:space-between;font-size:9px;color:#555;letter-spacing:1.5px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:80;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}.drawer{position:fixed;right:-500px;top:0;width:min(480px,100%);height:100dvh;background:#0d0d0d;z-index:90;border-left:1px solid #333;transition:.32s ease;padding:26px;overflow:auto}.drawer.show{right:0}.drawerHead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.drawer h2{font-size:24px;margin:0;letter-spacing:-1px}.close{border:0;background:transparent;color:white;font-size:28px;line-height:1}.cartItem{padding:18px 0;border-bottom:1px solid #262626;display:grid;grid-template-columns:1fr auto;gap:10px}.small{font-size:10px;color:#777;line-height:1.6}.qty{display:flex;gap:7px;align-items:center}.qty button{width:30px;height:30px;background:#171717;color:white;border:1px solid #383838}.totalBlock{margin:22px 0;padding:18px;border:1px solid #292929;background:#090909}.totalBlock .rowline{display:flex;justify-content:space-between;font-size:11px;color:#888;margin:7px 0}.totalBlock .grand{font-size:20px;color:white;font-weight:950;padding-top:12px;margin-top:10px;border-top:1px solid #292929}.checkoutBtn{width:100%;min-height:50px;background:var(--red);color:#fff;border:0;font-size:10px;letter-spacing:2px;font-weight:1000}.checkoutBtn:hover{background:#d21927}
+.modal{position:fixed;inset:5vh max(3vw,calc((100vw - 860px)/2));background:#101010;z-index:100;border:1px solid #343434;padding:28px;overflow:auto;display:none;box-shadow:var(--shadow)}.modal.show{display:block}.modalHead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #2a2a2a;padding-bottom:18px;margin-bottom:22px}.modal h2{margin:0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:9px;color:#aaa;letter-spacing:1.4px;font-weight:900}.field input,.field textarea,.field select{background:#090909;color:white;border:1px solid #393939;padding:13px}.summary{margin:20px 0;padding:16px;background:#090909;border:1px solid #292929;font-size:11px;line-height:1.7}.success{padding:28px;background:#0d1710;border:1px solid #24402a}
+.quickModal{position:fixed;inset:8vh max(3vw,calc((100vw - 980px)/2));background:#0f0f0f;z-index:100;border:1px solid #333;display:none;overflow:auto}.quickModal.show{display:grid;grid-template-columns:1fr 1fr}.quickImage{min-height:620px;background:#151515}.quickImage img{width:100%;height:100%;object-fit:cover}.quickCopy{padding:34px;display:flex;flex-direction:column;justify-content:center}.quickCopy .qname{font-size:38px;font-weight:1000;letter-spacing:-2px;margin:10px 0}.quickCopy .qprice{font-size:22px;font-weight:950;margin-bottom:18px}.quickCopy p{color:#808080;line-height:1.7;font-size:12px}.quickClose{position:absolute;right:20px;top:16px;z-index:2;border:0;background:rgba(0,0,0,.65);color:white;width:42px;height:42px;font-size:24px}
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:60;height:44px;padding:0 14px;border-radius:24px;display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:10px;font-weight:1000;letter-spacing:1px;box-shadow:0 12px 32px rgba(0,0,0,.45)}.whatsapp svg{width:18px;height:18px;fill:currentColor}.whatsapp span{display:inline}
+.mobileMenu{position:fixed;inset:110px 0 auto 0;background:#090909;z-index:45;border-bottom:1px solid var(--line);display:none;padding:18px 4vw}.mobileMenu.show{display:flex;flex-direction:column}.mobileMenu a{padding:14px 0;border-bottom:1px solid #202020;font-size:11px;letter-spacing:2px}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:980px){nav{grid-template-columns:1fr auto}.navlinks{display:none}.logo{grid-column:1}.navright{grid-column:2}.menuBtn{display:inline-block}.hero{background-position:60% center}.heroVisual{display:none}.heroVisual:before{background:linear-gradient(0deg,#070707 0%,rgba(7,7,7,.05) 44%)}.heroCopy{min-height:78vh;padding:76px 5vw 64px;max-width:650px}.heroCopy:after{font-size:170px}.productGrid{grid-template-columns:repeat(2,1fr)}.editorial{grid-template-columns:1fr}.editorialVisual{min-height:58vh}.footerGrid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:620px){.topbar{font-size:8px;letter-spacing:1.7px}.logo{font-size:16px;letter-spacing:5px}.iconbtn{display:none}.hero{background-position:64% center}.heroVisual{display:none}.heroBadge{top:16px;right:16px}.heroMeta{left:16px;right:16px;bottom:16px}.hero h1{font-size:58px;letter-spacing:-4px}.hero:before{background:linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.84) 58%,rgba(5,5,5,.25) 100%),linear-gradient(0deg,rgba(5,5,5,.84),transparent 58%)}.heroCopy p{font-size:12px}.section{padding:62px 4vw}.sectionTop{align-items:flex-start;flex-direction:column}.sectionTop h2{font-size:48px}.toolbar{align-items:flex-start;flex-direction:column}.productGrid{grid-template-columns:1fr;gap:14px}.productCard:hover{transform:none}.quick{opacity:1;transform:none}.visual img{aspect-ratio:4/5}.stats{grid-template-columns:1fr}.stat{border-right:0!important;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.promiseGrid{grid-template-columns:1fr}.miniList{grid-template-columns:1fr 1fr}.footerGrid{grid-template-columns:1fr}.footerBottom{flex-direction:column;gap:8px}.modal{inset:2vh 2vw}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.quickModal.show{inset:2vh 2vw;display:block}.quickImage{min-height:52vh}.quickCopy{padding:24px}.quickCopy .qname{font-size:28px}.whatsapp{height:42px;width:42px;padding:0;justify-content:center}.whatsapp span{display:none}.buyrow{grid-template-columns:.9fr 1.4fr}}
+
+/* DANVEXIS reference-theme upgrade */
+body{background:#050505}
+.topbar{display:none!important}
+.dvxNav{position:sticky;top:0;height:92px;grid-template-columns:1fr auto 1fr;padding:0 4.2vw;background:rgba(5,5,5,.94);border-bottom:1px solid #1b1b1b;backdrop-filter:blur(18px)}
+.dvxNav .logo{font-size:20px;letter-spacing:8px}
+.navright{gap:18px}
+.cartIconBtn,.menuIconBtn{position:relative;border:0;background:transparent;color:#f6f4ef;padding:0;display:grid;place-items:center}
+.cartIconBtn{width:42px;height:44px}.cartIconBtn svg{width:33px;height:33px}.cartBadge{position:absolute;right:-3px;top:0;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:#d31322;color:#fff;font-size:10px;display:grid;place-items:center;font-weight:1000}
+.menuIconBtn{width:36px;height:36px;gap:5px}.menuIconBtn span{width:29px;height:2px;background:#f3f1ec;display:block}.menuIconBtn span:nth-child(2){width:22px;margin-left:auto}.menuIconBtn span:nth-child(3){width:29px}
+.hero{min-height:calc(100vh - 92px);background-position:center 34%;border-bottom:1px solid #202020}.hero:before{background:linear-gradient(90deg,rgba(4,4,4,.98) 0%,rgba(4,4,4,.88) 38%,rgba(4,4,4,.2) 70%,rgba(4,4,4,.04) 100%),linear-gradient(0deg,rgba(4,4,4,.4),transparent 45%)}
+.heroCopy{min-height:calc(100vh - 92px);padding:8vw 4.6vw 6vw;max-width:690px}.heroCopy:after{display:none}.eyebrow{color:#df2532}.hero h1{font-size:clamp(74px,8.2vw,126px);line-height:.76;margin:20px 0 30px}.hero h1 span{-webkit-text-stroke:1.3px rgba(245,242,237,.52)}.heroCopy p{max-width:530px;font-size:14px;line-height:1.85;color:#aaa}.heroActions{gap:16px;margin-top:28px}.cta,.ghostBtn{min-height:56px;padding:0 34px;font-size:11px;letter-spacing:2.2px}.ghostBtn{min-width:210px;background:rgba(8,8,8,.42)}
+.featureStrip{background:#070707}.featureStrip .stat{padding:34px 2.8vw;text-align:center;display:flex;flex-direction:column;align-items:center;min-height:190px}.featureIcon{height:50px;margin-bottom:16px;color:#f7f5ef}.featureIcon svg{width:48px;height:48px}.featureStrip .stat b{font-size:11px;letter-spacing:.6px}.featureStrip .stat span{font-size:11px;line-height:1.55;max-width:170px;color:#a1a1a1;margin-top:10px}
+.dropSection{position:relative;overflow:hidden;padding-top:76px;background:#050505}.dropSection:before{content:"";position:absolute;right:-7vw;top:-4vw;width:min(52vw,680px);aspect-ratio:1;background:url('drop-globe.png') center/cover no-repeat;opacity:.72;mix-blend-mode:screen;pointer-events:none}.dropSection:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 77% 18%,rgba(193,18,31,.14),transparent 31%),linear-gradient(90deg,#050505 0%,rgba(5,5,5,.84) 48%,rgba(5,5,5,.35) 100%);pointer-events:none}.dropSection>*{position:relative;z-index:1}.dropIntro{display:block;margin-bottom:34px}.dropIntro h2{font-size:clamp(58px,7.5vw,96px);margin:12px 0 18px;letter-spacing:-5px}.dropIntro p{margin:0;max-width:590px;font-size:13px;line-height:1.8;color:#aaa}.toolbar{border-top:0;margin-top:20px;padding-top:0}.filters{gap:14px}.chip{min-width:112px;min-height:56px;background:rgba(8,8,8,.74);border:1px solid #383838;font-size:10px;letter-spacing:2px}.chip.active,.chip:hover{background:#f5f2eb;border-color:#f5f2eb}.count{display:none}
+.productGrid{position:relative;z-index:2;margin-top:34px}.productCard{background:rgba(11,11,11,.9);border-color:#2c2c2c}.visual{background:#0b0b0b}.whatsapp{width:44px;height:44px;padding:0;justify-content:center;border-radius:50%}.whatsapp span{display:none}
+.mobileMenu{inset:92px 0 auto 0}
+@media(max-width:980px){.dvxNav{height:80px}.dvxNav .navlinks{display:none}.menuIconBtn{display:grid}.hero{min-height:820px;background-position:58% center}.heroCopy{min-height:820px;max-width:630px;padding:120px 5vw 70px}.hero h1{font-size:72px}.dropSection:before{width:72vw;right:-24vw;top:0}.featureStrip{grid-template-columns:repeat(4,1fr)}.featureStrip .stat{border-bottom:0!important}.mobileMenu{inset:80px 0 auto 0}}
+@media(max-width:620px){.dvxNav{height:72px;padding:0 4.5vw}.dvxNav .logo{font-size:16px;letter-spacing:5.5px}.cartIconBtn{width:37px}.cartIconBtn svg{width:29px}.menuIconBtn{width:31px}.menuIconBtn span{width:25px}.menuIconBtn span:nth-child(2){width:19px}.menuIconBtn span:nth-child(3){width:25px}.navright{gap:10px}.hero{min-height:720px;background-position:62% center}.hero:before{background:linear-gradient(90deg,rgba(4,4,4,.98) 0%,rgba(4,4,4,.88) 48%,rgba(4,4,4,.25) 80%,rgba(4,4,4,.08) 100%),linear-gradient(0deg,rgba(4,4,4,.55),transparent 55%)}.heroCopy{min-height:720px;padding:72px 4.6vw 38px;justify-content:center}.hero .eyebrow{font-size:9px;letter-spacing:3px}.hero h1{font-size:56px;letter-spacing:-3.8px;margin:18px 0 24px}.heroCopy p{font-size:12px;line-height:1.75;max-width:330px}.heroActions{display:grid;grid-template-columns:1fr;max-width:310px}.cta,.ghostBtn{width:100%;min-width:0}.featureStrip{grid-template-columns:1fr 1fr}.featureStrip .stat{min-height:178px;padding:26px 12px;border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}.featureStrip .stat:nth-child(2n){border-right:0!important}.featureStrip .stat:nth-child(n+3){border-bottom:0!important}.featureIcon{height:42px;margin-bottom:12px}.featureIcon svg{width:42px;height:42px}.featureStrip .stat b{font-size:9px}.featureStrip .stat span{font-size:10px;max-width:140px}.dropSection{padding:62px 4vw}.dropSection:before{width:115vw;right:-58vw;top:40px;opacity:.66}.dropSection:after{background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.88) 57%,rgba(5,5,5,.26) 100%)}.dropIntro h2{font-size:56px;letter-spacing:-3px}.dropIntro p{font-size:12px;max-width:310px}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}.chip{min-width:0;min-height:50px;padding:0 8px}.filters .chip:first-child{grid-column:span 1}.productGrid{margin-top:26px}.mobileMenu{inset:72px 0 auto 0}}
+
+
+/* =========================================================
+   DANVEXIS UNIVERSAL RESPONSIVE LAYER
+   Phones • Tablets • Laptops • Desktops • Large Screens
+   ========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+}
+button, select, input, textarea {
+  max-width: 100%;
+}
+.dvxNav,
+.hero,
+.stats,
+.section,
+.editorial,
+.promise,
+footer {
+  width: 100%;
+}
+.hero {
+  min-height: clamp(620px, calc(100svh - 72px), 980px);
+}
+.heroBg {
+  object-fit: cover;
+  object-position: 60% center;
+}
+.heroCopy {
+  width: min(100%, 760px);
+  min-height: inherit;
+}
+.productGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.productCard,
+.visual,
+.productInfo,
+.buyrow {
+  min-width: 0;
+}
+.visual img {
+  width: 100%;
+  height: auto;
+}
+.drawer {
+  width: min(480px, 100vw);
+}
+.modal,
+.quickModal {
+  max-width: calc(100vw - 24px);
+}
+.formgrid > *,
+.footerGrid > *,
+.editorial > *,
+.promiseGrid > *,
+.stats > * {
+  min-width: 0;
+}
+
+/* Large desktops */
+@media (min-width: 1440px) {
+  .dvxNav {
+    padding-left: max(4.2vw, calc((100vw - 1500px)/2));
+    padding-right: max(4.2vw, calc((100vw - 1500px)/2));
+  }
+  .heroCopy,
+  .section,
+  .promise,
+  footer {
+    padding-left: max(4.6vw, calc((100vw - 1500px)/2));
+    padding-right: max(4.6vw, calc((100vw - 1500px)/2));
+  }
+  .productGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Laptop / small desktop */
+@media (min-width: 981px) and (max-width: 1199px) {
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hero h1 {
+    font-size: clamp(70px, 8vw, 104px);
+  }
+}
+
+/* Tablets landscape + portrait */
+@media (min-width: 621px) and (max-width: 980px) {
+  .dvxNav {
+    height: 76px;
+    padding: 0 3.5vw;
+  }
+  .hero {
+    min-height: clamp(680px, calc(100svh - 76px), 860px);
+  }
+  .heroBg {
+    object-position: 62% center;
+  }
+  .heroCopy {
+    min-height: inherit;
+    padding: 72px 5vw 60px;
+    max-width: 620px;
+  }
+  .hero h1 {
+    font-size: clamp(64px, 10vw, 88px);
+  }
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+  .editorialVisual {
+    min-height: 56vw;
+    max-height: 620px;
+  }
+  .promiseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .promiseGrid .promiseCard:last-child {
+    grid-column: 1 / -1;
+  }
+  .footerGrid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* All phones */
+@media (max-width: 620px) {
+  .dvxNav {
+    height: 68px;
+    padding: 0 16px;
+  }
+  .dvxNav .logo {
+    font-size: clamp(14px, 4.5vw, 17px);
+    letter-spacing: clamp(4px, 1.5vw, 6px);
+  }
+  .navright {
+    gap: 8px;
+  }
+  .cartIconBtn {
+    width: 38px;
+    height: 42px;
+  }
+  .menuIconBtn {
+    width: 32px;
+    height: 36px;
+  }
+  .mobileMenu {
+    inset: 68px 0 auto 0;
+  }
+
+  .hero {
+    min-height: max(640px, calc(100svh - 68px));
+  }
+  .heroBg {
+    object-position: 64% center;
+  }
+  .heroCopy {
+    min-height: inherit;
+    padding: 54px 18px 34px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 64px);
+    line-height: .80;
+    letter-spacing: -3px;
+  }
+  .heroCopy p {
+    max-width: 92%;
+  }
+  .heroActions {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cta,
+  .ghostBtn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .featureStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .featureStrip .stat {
+    min-height: 160px;
+    padding: 22px 10px;
+  }
+
+  .section,
+  .dropSection,
+  .promise {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .sectionTop h2,
+  .dropIntro h2 {
+    font-size: clamp(44px, 14vw, 58px);
+    letter-spacing: -3px;
+  }
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .filters .chip {
+    width: 100%;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+  .visual img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  .buyrow {
+    grid-template-columns: minmax(96px, .9fr) minmax(0, 1.4fr);
+  }
+
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+  .editorialVisual {
+    min-height: 72vw;
+  }
+  .editorialCopy {
+    padding: 52px 18px;
+  }
+  .miniList {
+    grid-template-columns: 1fr;
+  }
+
+  .promiseGrid,
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .drawer {
+    width: 100vw;
+    padding: 20px 16px max(22px, env(safe-area-inset-bottom));
+  }
+  .modal {
+    inset: 8px;
+    max-width: calc(100vw - 16px);
+    padding: 20px 16px calc(24px + env(safe-area-inset-bottom));
+  }
+  .quickModal.show {
+    inset: 8px;
+    max-width: calc(100vw - 16px);
+  }
+  .quickImage {
+    min-height: 48vh;
+  }
+
+  .whatsapp {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .dvxNav {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .dvxNav .logo {
+    font-size: 13px;
+    letter-spacing: 3.5px;
+  }
+  .heroCopy {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(44px, 14vw, 54px);
+  }
+  .section,
+  .dropSection,
+  .promise,
+  footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .buyrow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Short-height phones / landscape phones */
+@media (max-height: 600px) and (max-width: 980px) {
+  .hero {
+    min-height: 620px;
+  }
+  .heroCopy {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+/* Prevent oversized text when device accessibility text is large */
+@supports (font-size: clamp(1rem, 2vw, 2rem)) {
+  .hero h1,
+  .sectionTop h2,
+  .dropIntro h2,
+  .editorialCopy h2 {
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* Reference hero interface */
+.refPromo{height:38px;display:flex;align-items:center;justify-content:center;background:#b90f19;color:#fff;font-size:12px;letter-spacing:2.5px;font-weight:900;text-align:center;padding:0 14px;position:relative;z-index:60}
+.dvxNav{top:0;height:86px;background:#050505}.dvxNav .navlinks{gap:42px}.dvxNav .navlinks a{font-size:11px;opacity:1}.dvxNav .navlinks .activeNav{color:#d31322}.hero{min-height:calc(100svh - 124px)}.heroBg{object-position:center center}.hero:before{background:linear-gradient(90deg,rgba(3,3,3,.99) 0%,rgba(3,3,3,.93) 27%,rgba(3,3,3,.45) 49%,rgba(3,3,3,.05) 72%),linear-gradient(0deg,rgba(3,3,3,.65),transparent 45%)}.heroCopy{min-height:calc(100svh - 124px);padding:8vh 5vw 4vh;max-width:650px}.hero .eyebrow{color:#cf1723;font-size:12px;letter-spacing:2.2px}.hero h1{font-size:clamp(72px,8vw,126px);line-height:.84;letter-spacing:-5px;margin:18px 0 22px}.hero h1 span{color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.72)}.heroCopy p{font-size:15px;line-height:1.55;color:#c2c2c2}.heroActions{margin-top:26px}.cta,.ghostBtn{min-height:54px}.cta{min-width:235px}.ghostBtn{min-width:180px}.heroChapter{margin-top:auto;padding-top:48px;display:flex;align-items:center;gap:16px;font-size:10px;letter-spacing:2px}.heroChapter i{display:block;width:130px;height:2px;background:linear-gradient(90deg,#d31322 0 28%,#292929 28%)}.heroChapter b{color:#d31322}.heroChapter span{font-weight:900}.stats.featureStrip{border-top:1px solid #222}
+@media(max-width:980px){.refPromo{font-size:10px;height:34px}.dvxNav{height:74px}.hero{min-height:calc(100svh - 108px)}.heroCopy{min-height:inherit}.hero h1{font-size:clamp(62px,11vw,86px)}.heroChapter{padding-top:34px}}
+@media(max-width:620px){.refPromo{height:32px;font-size:8px;letter-spacing:1.4px}.dvxNav{height:66px}.hero{min-height:calc(100svh - 98px)}.heroBg{object-position:67% center}.hero:before{background:linear-gradient(90deg,rgba(3,3,3,.98) 0%,rgba(3,3,3,.88) 48%,rgba(3,3,3,.25) 78%,rgba(3,3,3,.08) 100%),linear-gradient(0deg,rgba(3,3,3,.68),transparent 60%)}.heroCopy{padding:56px 18px 26px;justify-content:center}.hero h1{font-size:clamp(50px,15vw,64px);letter-spacing:-3px}.heroCopy p{font-size:12px;max-width:290px}.heroActions{max-width:300px}.heroChapter{margin-top:40px;padding-top:0;gap:10px}.heroChapter i{width:72px}.heroChapter span{font-size:8px}}
+
+</style>
+</head>
+<body>
+<div class="refPromo">FREE SHIPPING ON ALL PREPAID ORDERS | COD AVAILABLE</div>
+<nav class="dvxNav">
+<a href="#" class="logo">DANVEXIS</a>
+<div class="navlinks"><a class="activeNav" href="#drop">Home</a><a href="#shop">Shop</a><a href="#shop">Collections</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="navright">
+<button class="cartIconBtn" onclick="openCart()" aria-label="Open bag">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h2l2.5 14h13.7l2.4-9.5H10.2M12.5 26.5a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span class="cartBadge" id="bagCount">0</span>
+</button>
+<button class="menuIconBtn" onclick="toggleMenu()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mobileMenu" id="mobileMenu"><a href="#shop" onclick="toggleMenu()">SHOP</a><a href="#drop" onclick="toggleMenu()">DROP 01</a><a href="#about" onclick="toggleMenu()">STORY</a><a href="#contact" onclick="toggleMenu()">CONTACT</a></div>
+
+<header class="hero" id="drop">
+<img class="heroBg" src="danvexis-hero-clean.png" alt="" aria-hidden="true">
+<div class="heroCopy reveal"><span class="eyebrow">DROP 01 — THE FIRST EVOLUTION</span><h1>EVOLVE <span>WITHOUT</span> LIMITS</h1><p>Designed for those who break boundaries.<br>Built for the evolution of the future.</p><div class="heroActions"><a class="cta" href="#shop">SHOP DROP 01 <b>→</b></a><a class="ghostBtn" href="#about">EXPLORE <b>→</b></a></div><div class="heroChapter"><i></i><b>01</b><span>THE FIRST EVOLUTION</span></div></div>
+
+</header>
+
+<div class="stats featureStrip reveal">
+<div class="stat"><div class="featureIcon"><svg viewBox="0 0 48 48"><path d="M14 18c2-7 8-10 12-5 5-5 11-2 12 5 5 0 7 5 4 9-4 5-14 6-18 15-4-9-14-10-18-15-3-4-1-9 4-9 1-5 7-8 12-5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 20v21M17 26c4 2 6 5 7 10M31 26c-4 2-6 5-7 10" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><b>HEAVYWEIGHT COTTON</b><span>Premium heavyweight cotton feel.</span></div>
+<div class="stat"><div class="featureIcon"><svg viewBox="0 0 48 48"><path d="M15 11 8 17l6 8 5-4v17h18V21l5 4 6-8-7-6-7 4h-12l-7-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><b>OVERSIZED FIT</b><span>Relaxed streetwear silhouette.</span></div>
+<div class="stat"><div class="featureIcon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2"/><path d="m24 13 3.3 6.7 7.4 1.1-5.4 5.2 1.3 7.4-6.6-3.5-6.6 3.5 1.3-7.4-5.4-5.2 7.4-1.1L24 13Z" fill="currentColor"/></svg></div><b>LIMITED ART</b><span>Each design stays distinct.</span></div>
+<div class="stat"><div class="featureIcon"><svg viewBox="0 0 48 48"><path d="M5 14h25v20H5zM30 20h7l6 7v7H30z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="13" cy="36" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="36" cy="36" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 19h10M8 24h7" stroke="currentColor" stroke-width="2"/></svg></div><b>COD ISLANDWIDE</b><span>Order now, pay on delivery.</span></div>
+</div>
+
+<section class="section dropSection" id="shop">
+<div class="sectionTop dropIntro reveal"><div><span class="eyebrow">AVAILABLE NOW</span><h2>DROP 01</h2><p>The first official DANVEXIS chapter.<br>Original graphics, premium silhouettes<br>and limited availability.</p></div></div>
+<div class="toolbar reveal"><div class="filters"><button class="chip active" onclick="filterProducts('All',this)">ALL</button><button class="chip" onclick="filterProducts('Black',this)">BLACK</button><button class="chip" onclick="filterProducts('White',this)">WHITE</button><button class="chip" onclick="filterProducts('Red',this)">RED</button><button class="chip" onclick="filterProducts('Green',this)">GREEN</button></div><div class="count" id="productCount">0 PRODUCTS</div></div>
+<div class="productGrid" id="productGrid"></div>
+</section>
+
+<section class="editorial" id="about"><div class="editorialVisual"></div><div class="editorialCopy reveal"><span class="eyebrow">DANVEXIS / CHAPTER 01</span><h2>THE FIRST<br>EVOLUTION.</h2><p>DROP 01 marks the point where experimentation became identity. DANVEXIS is not built around repeating one mascot, one palette or one formula. Every design is allowed to become its own world while the brand remains connected through attitude, composition and intent.</p><div class="miniList"><div><b>01 / ORIGINALITY</b><span>Every artwork has its own direction.</span></div><div><b>02 / MATERIAL</b><span>Premium heavyweight streetwear base.</span></div><div><b>03 / DETAIL</b><span>Print-led design with controlled impact.</span></div><div><b>04 / EVOLUTION</b><span>Each drop moves the language forward.</span></div></div></div></section>
+
+<section class="promise"><div class="sectionTop reveal"><div><span class="eyebrow">BUILT FOR THE BOLD</span><h2>DANVEXIS STANDARD</h2></div></div><div class="promiseGrid"><article class="promiseCard reveal"><small>01</small><h3>Original Visual Worlds</h3><p>Every release is developed as a separate concept rather than a recolor of the same idea.</p></article><article class="promiseCard reveal"><small>02</small><h3>Streetwear First</h3><p>Oversized silhouettes, heavyweight fabric and graphics designed to carry presence.</p></article><article class="promiseCard reveal"><small>03</small><h3>Limited by Design</h3><p>Stock is intentionally controlled to keep each release focused and distinctive.</p></article></div></section>
+
+<footer id="contact"><div class="footerGrid"><div><div class="footerLogo">DANVEXIS</div><p>PREMIUM STREETWEAR · SRI LANKA<br>EVOLVE WITHOUT LIMITS.</p></div><div class="footerLinks"><span class="eyebrow">EXPLORE</span><a href="#shop">Shop Drop 01</a><a href="#about">Brand Story</a><a href="https://wa.me/94728035151" target="_blank" rel="noopener">WhatsApp</a></div><div><span class="eyebrow">ORDER SUPPORT</span><p>Cash on Delivery<br>Islandwide Delivery<br>WhatsApp: +94 72 803 5151</p></div></div><div class="footerBottom"><span>© 2026 DANVEXIS</span><span>THE FIRST EVOLUTION</span></div></footer>
+
+<a class="whatsapp" href="https://wa.me/94728035151?text=Hi%20DANVEXIS%2C%20I%20need%20help%20with%20an%20order." target="_blank" rel="noopener" aria-label="Chat with DANVEXIS on WhatsApp"><svg viewBox="0 0 32 32"><path d="M19.11 17.33c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.59.13-.17.26-.67.85-.83 1.02-.15.17-.3.2-.56.07-.26-.13-1.1-.4-2.09-1.29-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.59-1.41-.8-1.93-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.7.33-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3zM16.03 3.2c-7.07 0-12.82 5.75-12.82 12.82 0 2.26.59 4.47 1.71 6.41L3.1 29.08l6.81-1.78a12.77 12.77 0 0 0 6.12 1.56h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.03 3.2zm0 23.5h-.01c-1.91 0-3.78-.51-5.4-1.48l-.39-.23-4.04 1.06 1.08-3.94-.25-.4a10.64 10.64 0 1 1 9.01 4.99z"/></svg><span>WHATSAPP</span></a>
+
+<div class="overlay" id="overlay" onclick="closePanels()"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawerHead"><h2>YOUR BAG</h2><button class="close" onclick="closePanels()">×</button></div><div id="cartItems"></div><div class="totalBlock"><div class="rowline"><span>Subtotal</span><span>Rs. <span id="cartTotal">0</span></span></div><div class="rowline"><span>Delivery</span><span>Calculated on order</span></div><div class="rowline grand"><span>Total</span><span>Rs. <span id="cartGrand">0</span></span></div></div><button class="checkoutBtn" onclick="openCheckout()">CHECKOUT — CASH ON DELIVERY</button></aside>
+
+<div class="modal" id="checkoutModal"><div class="modalHead"><div><span class="eyebrow">SECURE ORDER</span><h2>CHECKOUT</h2></div><button class="close" onclick="closePanels()">×</button></div><div id="checkoutFormWrap"><div class="formgrid"><div class="field"><label>FULL NAME</label><input id="name" required></div><div class="field"><label>PHONE NUMBER</label><input id="phone" inputmode="tel" required></div><div class="field full"><label>DELIVERY ADDRESS</label><textarea id="address" rows="3" required></textarea></div><div class="field"><label>CITY / TOWN</label><input id="city" required></div><div class="field"><label>PROVINCE</label><select id="province"><option>Western</option><option>Central</option><option>Southern</option><option>Northern</option><option>Eastern</option><option>North Western</option><option>North Central</option><option>Uva</option><option>Sabaragamuwa</option></select></div><div class="field full"><label>ORDER NOTE (OPTIONAL)</label><textarea id="note" rows="2"></textarea></div></div><div class="summary" id="checkoutSummary"></div><button class="checkoutBtn" onclick="placeOrder()">PLACE COD ORDER</button></div><div id="successWrap" class="hide success"></div></div>
+
+<div class="quickModal" id="quickModal"><button class="quickClose" onclick="closePanels()">×</button><div class="quickImage"><img id="quickImage" alt="DANVEXIS product"></div><div class="quickCopy"><span class="eyebrow" id="quickMeta">DANVEXIS</span><div class="qname" id="quickName"></div><div class="qprice" id="quickPrice"></div><p id="quickDesc"></p><div class="buyrow"><select id="quickSize"></select><button class="addBtn" id="quickAdd">ADD TO BAG</button></div></div></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+const firebaseConfig={apiKey:"AIzaSyB7VnK4N_Fo2JhCNcYL-UY9gyqhezXI0-8",authDomain:"danvexis-3a1e0.firebaseapp.com",projectId:"danvexis-3a1e0",storageBucket:"danvexis-3a1e0.firebasestorage.app",messagingSenderId:"1083975479921",appId:"1:1083975479921:web:3a67e7b171f2652def61d0",measurementId:"G-EWJPTVB38Y"};
+const db=getFirestore(initializeApp(firebaseConfig));
+let baseProducts=[{"id":"DVX-01","name":"Ghost Delivery Club","price":2250,"image":"ghost.jpeg","sizes":["M"],"stock":{"M":5},"color":"White","category":"Oversized T-Shirt"},{"id":"DVX-11","name":"Design 11","price":2250,"image":"design11.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-10","name":"Design 10","price":2250,"image":"design10.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-09","name":"Design 09","price":2250,"image":"design09.jpeg","sizes":["L"],"stock":{"L":5},"color":"Black"},{"id":"DVX-08","name":"Design 08","price":2250,"image":"design08.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-07","name":"Design 07","price":2250,"image":"design07.jpeg","sizes":["L"],"stock":{"L":5},"color":"Black"},{"id":"DVX-06B","name":"Design 06 — Black","price":2250,"image":"design06black.jpeg","sizes":["M"],"stock":{"M":5},"color":"Black"},{"id":"DVX-05","name":"Design 05","price":2250,"image":"design05.jpeg","sizes":["L"],"stock":{"L":5},"color":"Green"},{"id":"DVX-03","name":"Unshaken — Design 03","price":2250,"image":"design03.jpeg","sizes":["L"],"stock":{"L":5},"color":"White"},{"id":"DVX-06R","name":"Design 06 — Red","price":2250,"image":"design06red.jpeg","sizes":["M"],"stock":{"M":5},"color":"Red"}];
+let products=[...baseProducts],cart=JSON.parse(localStorage.getItem('dvx_cart_v3')||'[]'),currentFilter='All',quickProductId=null;
+const $=s=>document.querySelector(s), money=n=>Number(n||0).toLocaleString('en-LK');
+function stockTotal(p){return Object.values(p.stock||{}).reduce((a,b)=>a+Number(b||0),0)}
+function escapeHtml(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]))}
+function renderProducts(){const filtered=products.filter(p=>currentFilter==='All'||String(p.color||'').toLowerCase()===currentFilter.toLowerCase());$('#productCount').textContent=`${filtered.length} PRODUCT${filtered.length===1?'':'S'}`;$('#productGrid').innerHTML=filtered.map(p=>{const total=stockTotal(p),badge=total<=0?'<span class="stockTag out">SOLD OUT</span>':total<=2?`<span class="stockTag low">${total} LEFT</span>`:`<span class="stockTag">${total} IN STOCK</span>`;const opts=(p.sizes||['M']).map(s=>`<option value="${escapeHtml(s)}">${escapeHtml(s)} · ${Number((p.stock||{})[s]||0)} LEFT</option>`).join('');return `<article class="productCard reveal"><div class="visual"><span class="tag">${escapeHtml(p.id)}</span>${badge}<img src="${p.image||'ghost.jpeg'}" alt="${escapeHtml(p.name)}" onerror="this.onerror=null;this.src='ghost.jpeg'"><button class="quick" onclick="openQuick('${p.id}')">QUICK VIEW</button></div><div class="productInfo"><div class="productTop"><div class="productName">${escapeHtml(p.name)}</div><div class="price">Rs. ${money(p.price)}</div></div><div class="meta">${escapeHtml(p.category||'Premium Streetwear')} · ${escapeHtml(p.color||'DANVEXIS')}</div><div class="buyrow"><select id="size-${p.id}" ${total<=0?'disabled':''}>${opts}</select><button class="addBtn" onclick="addToCart('${p.id}')" ${total<=0?'disabled':''}>${total<=0?'SOLD OUT':'ADD TO BAG'}</button></div></div></article>`}).join('');observeReveals()}
+function filterProducts(f,el){currentFilter=f;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));el.classList.add('active');renderProducts()}
+function addToCart(id,sizeOverride){const p=products.find(x=>x.id===id);if(!p)return;const size=sizeOverride||document.getElementById('size-'+id)?.value||(p.sizes||['M'])[0];if(Number((p.stock||{})[size]||0)<=0)return alert('This size is sold out.');const found=cart.find(x=>x.id===id&&x.size===size);if(found)found.qty++;else cart.push({id:p.id,name:p.name,price:Number(p.price),size,qty:1});saveCart();closeQuickOnly();openCart()}
+function saveCart(){localStorage.setItem('dvx_cart_v3',JSON.stringify(cart));renderCart()}
+function renderCart(){const count=cart.reduce((a,x)=>a+x.qty,0),total=cart.reduce((a,x)=>a+x.price*x.qty,0);$('#bagCount').textContent=count;$('#cartItems').innerHTML=cart.length?cart.map((x,i)=>`<div class="cartItem"><div><b>${escapeHtml(x.name)}</b><div class="small">SIZE ${escapeHtml(x.size)} · Rs. ${money(x.price)}</div></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button></div></div>`).join(''):'<p class="small" style="padding:22px 0">Your bag is empty.</p>';$('#cartTotal').textContent=money(total);$('#cartGrand').textContent=money(total)}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}
+function openCart(){const menu=$('#mobileMenu');if(menu)menu.classList.remove('show');const overlay=$('#overlay');const drawer=$('#cartDrawer');if(overlay)overlay.classList.add('show');if(drawer)drawer.classList.add('show')}
+function closeQuickOnly(){$('#quickModal').classList.remove('show')}
+function closePanels(){$('#overlay').classList.remove('show');$('#cartDrawer').classList.remove('show');$('#checkoutModal').classList.remove('show');$('#quickModal').classList.remove('show')}
+function openQuick(id){const p=products.find(x=>x.id===id);if(!p)return;quickProductId=id;$('#quickImage').src=p.image||'ghost.jpeg';$('#quickName').textContent=p.name;$('#quickPrice').textContent='Rs. '+money(p.price);$('#quickMeta').textContent=`${p.id} / ${p.category||'DANVEXIS'}`;$('#quickDesc').textContent=p.description||'Original DANVEXIS streetwear artwork from DROP 01 — THE FIRST EVOLUTION.';$('#quickSize').innerHTML=(p.sizes||['M']).map(s=>`<option value="${escapeHtml(s)}">SIZE ${escapeHtml(s)} · ${Number((p.stock||{})[s]||0)} LEFT</option>`).join('');const total=stockTotal(p);$('#quickAdd').disabled=total<=0;$('#quickAdd').textContent=total<=0?'SOLD OUT':'ADD TO BAG';$('#quickAdd').onclick=()=>addToCart(id,$('#quickSize').value);$('#overlay').classList.add('show');$('#quickModal').classList.add('show')}
+function openCheckout(){if(!cart.length)return alert('Your bag is empty.');const drawer=$('#cartDrawer'),overlay=$('#overlay'),modal=$('#checkoutModal'),form=$('#checkoutFormWrap'),success=$('#successWrap');if(drawer)drawer.classList.remove('show');if(overlay)overlay.classList.add('show');if(form)form.classList.remove('hide');if(success){success.classList.add('hide');success.innerHTML=''}if(!modal)return alert('Checkout could not open. Please refresh the page.');modal.classList.add('show');const t=cart.reduce((a,x)=>a+x.price*x.qty,0);$('#checkoutSummary').innerHTML='<b>ORDER SUMMARY</b><br><br>'+cart.map(x=>`${escapeHtml(x.name)} / ${escapeHtml(x.size)} × ${x.qty} — Rs. ${money(x.price*x.qty)}`).join('<br>')+`<br><br><b>TOTAL: Rs. ${money(t)}</b><br>PAYMENT: CASH ON DELIVERY`}
+async function placeOrder(){const name=$('#name').value.trim(),phone=$('#phone').value.trim(),address=$('#address').value.trim(),city=$('#city').value.trim();if(!name||!phone||!address||!city)return alert('Please complete your name, phone, address and city.');const total=cart.reduce((a,x)=>a+x.price*x.qty,0);const order={status:'New',customer:{name,phone,address,city,province:$('#province').value,note:$('#note').value},items:[...cart],total,createdAt:serverTimestamp()};try{const ref=await addDoc(collection(db,'orders'),order);const id='DVX-'+ref.id.slice(0,8).toUpperCase();cart=[];saveCart();$('#checkoutFormWrap').classList.add('hide');const s=$('#successWrap');s.classList.remove('hide');s.innerHTML=`<span class="eyebrow">ORDER CONFIRMED</span><h2>THANK YOU, ${escapeHtml(name)}.</h2><p>Your order number is <b>${id}</b>.</p><p>Total: <b>Rs. ${money(total)}</b> · Cash on Delivery.</p><button class="checkoutBtn" onclick="location.reload()">CONTINUE SHOPPING</button>`}catch(e){alert('Could not place order: '+e.message)}}
+async function loadFirestoreProducts(){try{let snap;try{snap=await getDocs(query(collection(db,'products'),orderBy('createdAt','desc')))}catch{snap=await getDocs(collection(db,'products'))}const merged=new Map(baseProducts.map(p=>[p.id,{...p}]));snap.forEach(docSnap=>{const d=docSnap.data();if(d.active===false)return;let sizes=[];let stock={};if(Array.isArray(d.sizes)&&d.sizes.length){sizes=d.sizes.map(String);if(d.stock&&typeof d.stock==='object'&&!Array.isArray(d.stock))stock={...d.stock};else sizes.forEach(s=>stock[s]=Number(d.stock||0))}else{const size=String(d.size||'M').trim()||'M';sizes=[size];stock={[size]:Number(d.stock||0)}}const sku=String(d.sku||docSnap.id);const existing=merged.get(sku)||{};merged.set(sku,{...existing,id:sku,name:d.name||existing.name||'DANVEXIS Product',price:Number(d.price??existing.price??0),image:d.imageData||d.imageUrl||existing.image||'',sizes,stock,color:d.color||existing.color||'All',category:d.category||existing.category||'Premium Streetwear',description:d.description||existing.description||''})});products=[...merged.values()]}catch(e){console.error('Firestore products:',e);products=[...baseProducts]}renderProducts()}
+function toggleMenu(){$('#mobileMenu').classList.toggle('show')}
+function observeReveals(){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal:not(.on)').forEach(el=>io.observe(el))}
+Object.assign(window,{filterProducts,addToCart,changeQty,openCart,closePanels,openCheckout,placeOrder,openQuick,toggleMenu});renderCart();observeReveals();loadFirestoreProducts();
+</script>
+</body>
+</html>
